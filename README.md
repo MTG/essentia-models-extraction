@@ -30,6 +30,10 @@ conda install -c conda-forge cudatoolkit=11.2
 
 ## Usage
 Check the [examples](examples/) for the typical use cases.
+
+The extraction of embeddings or activations requires a model.
+Check the [Essentia Models](https://essentia.upf.edu/models.html) site to download the appropriate model.
+
 These are all the options suported by the script:
 
 ```
