@@ -48,7 +48,8 @@ def extract(
     for src_path in sources:
         src = in_dir / src_path.rstrip()
         tgt = out_dir / src_path.rstrip()
-        tgt = tgt.with_suffix(tgt.suffix + ".mmap")
+        if tgt.suffix != ".mmap":
+            tgt = tgt.with_suffix(tgt.suffix + ".mmap")
 
         if not src.exists():
             raise FileNotFoundError(
