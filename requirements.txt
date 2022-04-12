@@ -1,0 +1,4 @@
+black
+essentia_tensorflow
+numpy
+tqdm

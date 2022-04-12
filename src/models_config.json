@@ -1,0 +1,71 @@
+{
+    "effnet_b0": {
+        "input_type": "mel_musicnn",
+        "input": "melspectrogram",
+        "embeddings": "onnx_tf_prefix_BatchNormalization_496/add_1",
+        "activations": "activations",
+        "x_size": 128,
+        "y_size": 96,
+        "seconds_to_patches": 62.5,
+        "squeeze": true,
+        "permutation": null
+    },
+    "effnet_b0_3M": {
+        "input_type": "mel_musicnn",
+        "input": "serving_default_melspectrogram",
+        "embeddings": "PartitionedCall:1",
+        "activations": "PartitionedCall:0",
+        "x_size": 128,
+        "y_size": 96,
+        "seconds_to_patches": 62.5,
+        "squeeze": true,
+        "permutation": null,
+        "batch_size": 64
+    },
+    "musicnn": {
+        "input_type": "mel_musicnn",
+        "input": "model/Placeholder",
+        "embeddings": "model/dense/BiasAdd",
+        "activations": "model/Sigmoid",
+        "x_size": 187,
+        "y_size": 96,
+        "seconds_to_patches": 62.5,
+        "squeeze": true,
+        "permutation": null
+    },
+    "openl3": {
+        "input_type": "mel_openl3",
+        "input": "melspectrogram",
+        "embeddings": "embeddings",
+        "x_size": 199,
+        "y_size": 128,
+        "seconds_to_patches": null,
+        "squeeze": false,
+        "permutation": [
+            0,
+            3,
+            2,
+            1
+        ]
+    },
+    "vggish": {
+        "input_type": "mel_vggish",
+        "input": "model/Placeholder",
+        "embeddings": "model/vggish/embeddings",
+        "x_size": 96,
+        "y_size": 64,
+        "seconds_to_patches": 100,
+        "squeeze": true,
+        "permutation": null
+    },
+    "yamnet": {
+        "input_type": "mel_vggish",
+        "input": "melspectrogram",
+        "embeddings": "embeddings",
+        "x_size": 96,
+        "y_size": 64,
+        "seconds_to_patches": 100,
+        "squeeze": true,
+        "permutation": null
+    }
+}
